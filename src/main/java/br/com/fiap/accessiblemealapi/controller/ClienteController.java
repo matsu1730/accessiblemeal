@@ -53,4 +53,9 @@ public class ClienteController {
         service.save(cliente);
         return ResponseEntity.ok(cliente);
     }    
+    
+    @GetMapping("/ping")
+    public String ping(){
+        return "pong";
+    }
 }

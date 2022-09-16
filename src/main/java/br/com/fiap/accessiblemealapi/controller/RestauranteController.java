@@ -70,5 +70,10 @@ public class RestauranteController {
         restaurante.setId(id);
         service.save(restaurante);
         return ResponseEntity.ok(restaurante);
-    }    
+    }
+    
+    @GetMapping("/ping")
+    public String ping(){
+        return "pong";
+    }
 }
